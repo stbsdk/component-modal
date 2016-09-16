@@ -1,4 +1,14 @@
 // @license The MIT License (MIT)
 // @copyright Stanislav Kalashnik <darkpark.main@gmail.com>
 
-@import "../node_modules/spa-component-modal/sass/main";
+@import "../node_modules/spa-component-modal/sass/body";
+@import "../node_modules/stb-component/sass/main";
+
+.stb-component-modal {
+    @include stb-component-release;
+    @include spa-component-modal;
+
+    @if $DEVELOP {
+        @include stb-component-develop;
+    }
+}
